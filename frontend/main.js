@@ -46,6 +46,7 @@ async function transferToken () {
     if(isAddress){
         try{
             await mtnt.methods.transfer(recipient, transferAmount).send({from: user});
+            location.reload();
         } catch(error){
             console.log(error);
         }
@@ -66,6 +67,7 @@ async function getRandomNumber() {
         let amount = web3.utils.toWei("0.1", "ether");
         console.log(amount);
          await mtnt.methods.payout(amount).send({from: user});
+         location.reload();
         } else{
         alert("You Loose!");
     }
@@ -82,6 +84,7 @@ async function fundContract() {
     let fundingAmount = parseInt(web3.utils.toWei($("#fundingAmount").val()));
     try{
         web3.eth.sendTransaction({from: ethereum.selectedAddress, to: tokenContractAddress, value: fundingAmount});
+        location.reload();
     } catch (error) {
         console.log(error);
     }
