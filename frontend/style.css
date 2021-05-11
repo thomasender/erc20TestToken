@@ -12,10 +12,13 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#146ad2",endCo
     display: flex;
 }
 .tokenHeader{
+    width: 90%;
+    margin: 0 auto;
     height: 150px;
     border-radius: 20px;
     display: flex;
     justify-content: space-around;
+    box-shadow: 10px 5px 5px black;
 }
 
 
@@ -25,6 +28,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#146ad2",endCo
     background: rgba(34, 51, 206, 0.678);
     border-radius: 20px;
     margin: auto;
+    box-shadow: 10px 5px 5px black;
 }
 
 
@@ -34,6 +38,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#146ad2",endCo
     background: rgba(34, 51, 206, 0.678);
     border-radius: 20px;
     margin: auto;
+    box-shadow: 10px 5px 5px black;
 }
 
 
@@ -43,6 +48,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#146ad2",endCo
     background: rgba(34, 51, 206, 0.678);
     border-radius: 20px;
     margin: auto;
+    box-shadow: 10px 5px 5px black;
 }
 
 .contractEthBalance{
@@ -51,6 +57,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#146ad2",endCo
     background: rgba(34, 51, 206, 0.678);
     border-radius: 20px;
     margin: auto;
+    box-shadow: 10px 5px 5px black;
 }
 
 .funding{
@@ -59,4 +66,5 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#146ad2",endCo
     background: rgba(34, 51, 206, 0.678);
     border-radius: 20px;
     margin: auto;
+    box-shadow: 10px 5px 5px black;
 }
