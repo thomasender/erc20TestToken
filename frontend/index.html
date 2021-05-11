@@ -31,7 +31,16 @@
         <p>Your ETH Balance is: </p><span id="userEthBalance"></span><br/>
         <p>Your Token Balance is: </p><span id="userTokenBalance"></span><br/>
     </div>
+    <div class="contractEthBalance">
+        <p>Contract ETH Balance:</p><span id="contractEthBalance"></span><br/>
+    </div>
 </div>
+
+<br/>   
+<div class="container">
+
+</div>
+
 
 <div class="container">    
     <div class="makeTransaction">
@@ -42,20 +51,19 @@
         <input type="number" id="transferTokenAmount"></input><br/>
         <button class="btn-primary" id="transferTokenBtn">Transfer Token(s)</button><br/>
     </div>
-</div>
-
-<div class="container">
     <div class="randomNumber">
-        <input type="number" id="userGuess" placeholder="Guess a number between 1 and 10" required></input>
+        <label for="userGuess">Guess a number between 0 and 10</label>
+        <input type="number" id="userGuess" placeholder="0 - 10" required></input>
         <button class="btn-primary" id="randomNumberBtn">Guess!</button>
     </div>
 </div>
-
+   
+<br/>   
 <div class="container">
-    <div class="contractEthBalance">
-        <p>Contract ETH Balance:</p><span id="contractEthBalance"></span><br/>
-    </div>
+
 </div>
+
+
     
 <div class="container">
     <div class="funding">

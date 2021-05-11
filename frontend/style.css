@@ -5,13 +5,13 @@ background: -webkit-radial-gradient(circle, rgba(20,106,210,1) 0%, rgba(11,68,13
 background: radial-gradient(circle, rgba(20,106,210,1) 0%, rgba(11,68,135,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#146ad2",endColorstr="#0b4487",GradientType=1);
     color: #aaa;
+    font-size: 18px;
 }
 
 .container {
     display: flex;
 }
 .tokenHeader{
-
     border-radius: 20px;
     display: flex;
     justify-content: space-around;
@@ -19,23 +19,43 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#146ad2",endCo
 
 
 .userData{
+    width: 25%;
+    padding: 15px;
+    background: rgba(34, 51, 206, 0.678);
+    border-radius: 20px;
     margin: auto;
 }
 
 
 .makeTransaction{
+    width: 40%;
+    padding: 15px;
+    background: rgba(34, 51, 206, 0.678);
+    border-radius: 20px;
     margin: auto;
 }
 
 
 .randomNumber{
+    width: 25%;
+    padding: 15px;
+    background: rgba(34, 51, 206, 0.678);
+    border-radius: 20px;
     margin: auto;
 }
 
 .contractEthBalance{
+    width: 25%;
+    padding: 15px;
+    background: rgba(34, 51, 206, 0.678);
+    border-radius: 20px;
     margin: auto;
 }
 
 .funding{
+    width: 25%;
+    padding: 15px;
+    background: rgba(34, 51, 206, 0.678);
+    border-radius: 20px;
     margin: auto;
 }
