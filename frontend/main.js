@@ -14,8 +14,8 @@ $(document).ready(function() {
         $("#transferTokenBtn").click(transferToken);
         $("#fundContractBtn").click(fundContract);
         $("#randomNumberBtn").click(getRandomNumber);
+        x = document.getElementById("funding");
         if(user === 0xD9Dbca32cC6Ae2A58445f65b8DEE4A4706D6C09a){
-            x = document.getElementById("funding");
             x.style.display === "block";
         } else {
             x.style.display === "none";
