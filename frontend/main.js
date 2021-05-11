@@ -6,9 +6,9 @@ var mtnt;
 $(document).ready(function() {
     window.ethereum.enable().then(async function (accounts) {
         mtnt = new web3.eth.Contract(abi, tokenContractAddress, {from: accounts[0]});
-        await userData();
-        await contractData();
-        await contractBalance();
+        userData();
+        contractData();
+        contractBalance();
         $("#transferTokenBtn").click(transferToken);
         $("#fundContractBtn").click(fundContract);
         $("#randomNumberBtn").click(getRandomNumber);
