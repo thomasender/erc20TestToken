@@ -12,6 +12,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#146ad2",endCo
     display: flex;
 }
 .tokenHeader{
+    height: 150px;
     border-radius: 20px;
     display: flex;
     justify-content: space-around;
