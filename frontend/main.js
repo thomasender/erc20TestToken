@@ -4,11 +4,11 @@ var tokenContractAddress = "0x5692924fA5Bbd483eEf88b4d02D288D849824ceE";
 var mtnt;
 
 $(document).ready(function() {
-    window.ethereum.enable().then(function (accounts) {
+    window.ethereum.enable().then(async function (accounts) {
         mtnt = new web3.eth.Contract(abi, tokenContractAddress, {from: accounts[0]});
-        userData();
-        contractData();
-        contractBalance();
+        await userData();
+        await contractData();
+        await contractBalance();
         $("#transferTokenBtn").click(transferToken);
         $("#fundContractBtn").click(fundContract);
         $("#randomNumberBtn").click(getRandomNumber);
