@@ -2,6 +2,7 @@ const web3 = new Web3(Web3.givenProvider);
 
 var tokenContractAddress = "0x5692924fA5Bbd483eEf88b4d02D288D849824ceE";
 var mtnt;
+var x;
 
 $(document).ready(function() {
     window.ethereum.enable().then(async function (accounts) {
@@ -14,7 +15,7 @@ $(document).ready(function() {
         $("#fundContractBtn").click(fundContract);
         $("#randomNumberBtn").click(getRandomNumber);
         if(user === 0xD9Dbca32cC6Ae2A58445f65b8DEE4A4706D6C09a){
-            let x = document.getElementById("funding");
+            x = document.getElementById("funding");
             x.style.display === "block";
         } else {
             x.style.display === "none";
