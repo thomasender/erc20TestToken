@@ -1,0 +1,41 @@
+body{
+    background: rgb(20,106,210);
+background: -moz-radial-gradient(circle, rgba(20,106,210,1) 0%, rgba(11,68,135,1) 100%);
+background: -webkit-radial-gradient(circle, rgba(20,106,210,1) 0%, rgba(11,68,135,1) 100%);
+background: radial-gradient(circle, rgba(20,106,210,1) 0%, rgba(11,68,135,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#146ad2",endColorstr="#0b4487",GradientType=1);
+    color: #aaa;
+}
+
+.container {
+    display: flex;
+}
+.tokenHeader{
+
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.userData{
+    margin: auto;
+}
+
+
+.makeTransaction{
+    margin: auto;
+}
+
+
+.randomNumber{
+    margin: auto;
+}
+
+.contractEthBalance{
+    margin: auto;
+}
+
+.funding{
+    margin: auto;
+}
