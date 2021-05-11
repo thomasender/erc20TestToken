@@ -63,7 +63,7 @@ async function getRandomNumber() {
     }
     else if(userGuess === randomNumber){
         alert("You WIN!");
-        let amount = web3.utils.toWei("1", "ether");
+        let amount = web3.utils.toWei("0.1", "ether");
         console.log(amount);
          await mtnt.methods.payout(amount).send({from: user});
         } else{
