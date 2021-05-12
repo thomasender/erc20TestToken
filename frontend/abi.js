@@ -281,6 +281,13 @@ var abi = [
   },
   {
     "inputs": [],
+    "name": "payToken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "randomResult",
     "outputs": [
       {

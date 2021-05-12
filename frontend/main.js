@@ -15,6 +15,7 @@ $(document).ready(function() {
         $("#transferTokenBtn").click(transferToken);
         $("#fundContractBtn").click(fundContract);
         $("#randomNumberBtn").click(getRandomNumber);
+        $("#requestTokens").click(payToken);
         x = document.getElementById("fundingDiv");
         
         if(user != 0xD9Dbca32cC6Ae2A58445f65b8DEE4A4706D6C09a) {
@@ -101,5 +102,14 @@ async function fundContract() {
         location.reload();
     } catch (error) {
         console.log(error);
+    }
+}
+
+async function payToken(){
+    let user = ethereum.selectedAddress;
+    try{
+        await mtnt.methods.payToken().send({from: user});
+    } catch (error) {
+        alert(error);
     }
 }
