@@ -1,6 +1,6 @@
 const web3 = new Web3(Web3.givenProvider);
 
-var tokenContractAddress = "0x5692924fA5Bbd483eEf88b4d02D288D849824ceE";
+var tokenContractAddress = "0x3d57bc4e26699cF9bdB41c37552eacBd54C0225c";
 var mtnt;
 var x;
 

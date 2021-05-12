@@ -12,6 +12,8 @@ contract MyTestNetToken is ERC20, ERC20PresetFixedSupply, VRFConsumerBase {
     address vrfCoordinatorMumbai = 0x8C7382F9D8f56b33781fE506E897a4F1e2d17255;
     address linkOnMumbai = 0x326C977E6efc84E512bB9C30f76E30c160eD06FB;
 
+   
+
 
 constructor(
     string memory name, 
@@ -41,4 +43,6 @@ function payout(uint256 amount) public {
     receive() external payable {
 
     }
+
+
 }
