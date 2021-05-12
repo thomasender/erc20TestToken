@@ -1,6 +1,6 @@
 const web3 = new Web3(Web3.givenProvider);
 
-var tokenContractAddress = "0xE7f37D8872C402e0530Cb576638bc4B890dFa0ea";
+var tokenContractAddress = "0x59282eB5c0ae4Aa4E1B1724FDCF629e192ebe3b6";
 var mtnt;
 var x;
 var y;
@@ -20,6 +20,7 @@ $(document).ready(function() {
         $("#randomNumberBtn").click(getRandomNumber);
         $("#requestTokens").click(payToken);
         $("#grantRewardBtn").click(grantReward);
+        $("#flipToken").click(flipCoin);
         
         x = document.getElementById("fundingDiv");
         y = document.getElementById("requestTokens");
@@ -147,4 +148,17 @@ async function payTokenReward(){
     } else {
         alert("You have not been granted any rewards!");
     }    
+}
+
+async function flipCoin(){
+    var heads = $("#heads").is(':checked');
+    var tails = $("#tails").is(':checked');
+    var bet;
+    var flip = Math.floor(Math.random() * 2);
+    if (flip == 0 && heads || flip == 1 && tails){
+        alert("You win! 100 MTNT Tokens go to your Account!");
+        grantReward();
+    } else {
+        alert ("You loose!");
+    }
 }

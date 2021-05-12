@@ -24,45 +24,49 @@
                     <td><h1>You are connected to My TestNet Token</h1></td>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td>
-                        <h4>Name:</h4><span style="align: center" id="tokenName"></span><br/>
-                        <h4>Symbol:</h4><span style="align: center" id="tokenSymbol"></span><br/>
+                        <div class="contractBalances">
+                            <h4>Name:</h4><span style="align: center" id="tokenName"></span><br/>
+                            <h4>Symbol:</h4><span style="align: center" id="tokenSymbol"></span><br/>
+                        </div>
                     </td>
                     <td>
-                        <h4>Supply:</h4><span style="align: center" id="tokenTotalSupply"></span>
-                        <h4>Decimals:</h4><span style="align: center" id="tokenDecimals"></span>
+                        <div class="contractBalances">
+                            <h4>Supply:</h4><span style="align: center" id="tokenTotalSupply"></span>
+                            <h4>Decimals:</h4><span style="align: center" id="tokenDecimals"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="contractBalances">
+                            <h4>Contract ETH Balance:</h4><span id="contractEthBalance"></span><br/>
+                            <h4>Contract Token Balance:</h4><span id="contractTokenBalance"></span><br/>
+                        </div>    
                     </td>
                 </tr>
             </tbody>
         </table>    
-
-        
     </div>
-    
 <br/>   
-<div class="container">
 
-</div>
 
     
 <div class="container">
     <div class="userData">
         <p>Your ETH Balance is: </p><span id="userEthBalance"></span><br/>
         <p>Your Token Balance is: </p><span id="userTokenBalance"></span><br/>
+        <button class="btn-primary" id="requestTokens" style="border-radius: 20px;">Request 1000 FREE MTNT Tokens! (One time only)</button>
     </div>
-    <div class="contractEthBalance">
-        <p>Contract ETH Balance:</p><span id="contractEthBalance"></span><br/>
-        <p>Contract Token Balance:</p><span id="contractTokenBalance"></span><br/>
+    <div class="randomNumber">
+        <label for="userGuess">Guess a number between 0 and 10 and WIN 0.1 ETH!</label>
+        <input type="number" id="userGuess" placeholder="0 - 10" required></input>
+        <button class="btn-primary" id="randomNumberBtn">Guess!</button>
     </div>
-    <button class="btn-primary" id="requestTokens" style="border-radius: 20px;">Request 1000 FREE MTNT Tokens! (One time only)</button>
+    
 </div>
 
 <br/>   
-<div class="container">
-
-</div>
 
 
-<div class="container">    
+<div class="container">  
     <div class="makeTransaction">
         <p>Transfer Token:</p>
         <label for="transferRecipient">Recipient Address (Needs to be a valid Ethereum Address!)</label><br/>
@@ -70,24 +74,18 @@
         <label for="transferTokenAmount">Amount of MTNT to Transfer in Wei</label><br/>
         <input type="number" id="transferTokenAmount"></input><br/>
         <button class="btn-primary" id="transferTokenBtn">Transfer Token(s)</button><br/>
+    </div> 
+    <div class="flipCoin" id="tokenFlip">
+        <input type="radio" id="heads" name="headTail" checked>Heads</button>
+        <input type="radio" id="tails" name="headTail">Tails</button>
+        <button class="btn-primary" id="flipToken" style="border-radius: 10px;">Flip Coin</button>
     </div>
-    <div class="randomNumber">
-        <label for="userGuess">Guess a number between 0 and 10 and WIN 0.1 ETH!</label>
-        <input type="number" id="userGuess" placeholder="0 - 10" required></input>
-        <button class="btn-primary" id="randomNumberBtn">Guess!</button>
-    </div>
+  
 </div>
-   
+
 <br/>   
-<div class="container">
-    <div class="reward" id="rewardDiv">
-        <button class="btn-primary" id="grantRewardBtn">Get Token Reward!</button>
-    </div>
-    
-</div>
+<br/>
 
-
-    <br/>
 <div class="container">
     <div class="funding" id="fundingDiv">
         <p>Funding for Contract Owner:</p>

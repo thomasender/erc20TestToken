@@ -8,6 +8,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#146ad2",endCo
     font-size: 18px;
 }
 
+table {
+    border-spacing: 15px;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -49,12 +53,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#146ad2",endCo
     box-shadow: 10px 5px 5px black;
 }
 
-.contractEthBalance{
-    padding: 15px;
-    background: rgba(34, 51, 206, 0.678);
-    border-radius: 20px;
+.contractBalances{
+    border: 3px solid;
+    border-radius: 10px;
     margin: auto;
-    box-shadow: 10px 5px 5px black;
 }
 
 .funding{
@@ -66,6 +68,14 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#146ad2",endCo
 }
 
 .reward{
+    padding: 15px;
+    background: rgba(34, 51, 206, 0.678);
+    border-radius: 20px;
+    margin: auto;
+    box-shadow: 10px 5px 5px black;
+}
+
+.flipCoin{
     padding: 15px;
     background: rgba(34, 51, 206, 0.678);
     border-radius: 20px;
