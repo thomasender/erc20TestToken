@@ -1,8 +1,10 @@
 const web3 = new Web3(Web3.givenProvider);
 
-var tokenContractAddress = "0x3d57bc4e26699cF9bdB41c37552eacBd54C0225c";
+var tokenContractAddress = "0xB9de79Bb75b259b47c1C5D332c89a2ABBCaf7E62";
 var mtnt;
 var x;
+var y;
+var didRequestToken;
 
 $(document).ready(function() {
     window.ethereum.enable().then(async function (accounts) {
@@ -17,9 +19,13 @@ $(document).ready(function() {
         $("#randomNumberBtn").click(getRandomNumber);
         $("#requestTokens").click(payToken);
         x = document.getElementById("fundingDiv");
-        
+        y = document.getElementById("requestTokens");
+        didRequestToken = await mtnt.methods.tokenRequested().call();
         if(user != 0xD9Dbca32cC6Ae2A58445f65b8DEE4A4706D6C09a) {
             x.style.display = "none";
+        }
+        if(didRequestToken){
+            y.style.display = "none";
         }
     })
 })
@@ -107,9 +113,14 @@ async function fundContract() {
 
 async function payToken(){
     let user = ethereum.selectedAddress;
-    try{
-        await mtnt.methods.payToken().send({from: user});
-    } catch (error) {
-        alert(error);
+    if(didRequestToken == true){
+        alert("You already did request Tokens once!");
+    } else{
+        try{
+            await mtnt.methods.payToken().send({from: user});
+        } catch (error) {
+            console.log(error.reason);
+        }
     }
+  
 }
