@@ -21,6 +21,7 @@ $(document).ready(function() {
         x = document.getElementById("fundingDiv");
         y = document.getElementById("requestTokens");
         didRequestToken = await mtnt.methods.tokenRequested().call();
+        console.log(didRequestToken);
         if(user != 0xD9Dbca32cC6Ae2A58445f65b8DEE4A4706D6C09a) {
             x.style.display = "none";
         }
