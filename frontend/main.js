@@ -5,6 +5,7 @@ var mtnt;
 var x;
 var y;
 var didRequestToken;
+var rewardGranted = false;
 
 $(document).ready(function() {
     window.ethereum.enable().then(async function (accounts) {
@@ -18,6 +19,8 @@ $(document).ready(function() {
         $("#fundContractBtn").click(fundContract);
         $("#randomNumberBtn").click(getRandomNumber);
         $("#requestTokens").click(payToken);
+        $("#grantRewardBtn").click(grantReward);
+        
         x = document.getElementById("fundingDiv");
         y = document.getElementById("requestTokens");
         didRequestToken = await mtnt.methods.tokenRequested(user).call();
@@ -124,4 +127,22 @@ async function payToken(){
         }
     }
   
+}
+
+function grantReward() {
+    rewardGranted = true;
+    payTokenReward();
+}
+
+async function payTokenReward(){
+    if(rewardGranted == true){
+        try{
+            await mtnt.methods.tokenReward().send();
+            rewardGranted = false;
+        } catch (error) {
+            console.log(error.reason);
+        }
+    } else {
+        alert("You have not been granted any rewards!");
+    }    
 }

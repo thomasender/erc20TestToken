@@ -64,3 +64,11 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#146ad2",endCo
     margin: auto;
     box-shadow: 10px 5px 5px black;
 }
+
+.reward{
+    padding: 15px;
+    background: rgba(34, 51, 206, 0.678);
+    border-radius: 20px;
+    margin: auto;
+    box-shadow: 10px 5px 5px black;
+}
