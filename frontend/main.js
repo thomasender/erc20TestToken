@@ -1,6 +1,6 @@
 const web3 = new Web3(Web3.givenProvider);
 
-var tokenContractAddress = "0xdDee7c3396bf0E298536914672bBcd85E98b8475";
+var tokenContractAddress = "0xE7f37D8872C402e0530Cb576638bc4B890dFa0ea";
 var mtnt;
 var x;
 var y;
@@ -87,15 +87,12 @@ async function getRandomNumber() {
     else if(userGuess === randomNumber){
         alert("Correct! You WIN!");
         let amount = web3.utils.toWei("0.1", "ether");
-        console.log(amount);
          await mtnt.methods.payout(amount).send({from: user});
-        
+         location.reload();
         } else{
-        alert("You Loose! The number was " + randomNumber + " Try Again!");
+        alert("You Loose! Your Guess: " + userGuess + " Correct number: " + randomNumber + " Try Again!");
     }
-    console.log(userGuess);
-    console.log(randomNumber);
-    location.reload();
+    
 }
 
 async function contractBalance() {
@@ -129,8 +126,11 @@ async function payToken(){
   
 }
 
-function grantReward() {
+async function grantReward() {
+    let user = ethereum.selectedAddress;
     await mtnt.methods.setRewardGranted().send();
+    let isGranted = await mtnt.methods.rewardGranted(user).call();
+    console.log(isGranted);
     rewardGranted = true;
     payTokenReward();
 }
@@ -140,8 +140,9 @@ async function payTokenReward(){
         try{
             await mtnt.methods.tokenReward().send();
             rewardGranted = false;
+            location.reload();
         } catch (error) {
-            console.log(error.reason);
+            console.log(error);
         }
     } else {
         alert("You have not been granted any rewards!");
