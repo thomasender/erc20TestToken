@@ -1,6 +1,6 @@
 const web3 = new Web3(Web3.givenProvider);
 
-var tokenContractAddress = "0xB9de79Bb75b259b47c1C5D332c89a2ABBCaf7E62";
+var tokenContractAddress = "0xdDee7c3396bf0E298536914672bBcd85E98b8475";
 var mtnt;
 var x;
 var y;
@@ -130,6 +130,7 @@ async function payToken(){
 }
 
 function grantReward() {
+    await mtnt.methods.setRewardGranted().send();
     rewardGranted = true;
     payTokenReward();
 }
