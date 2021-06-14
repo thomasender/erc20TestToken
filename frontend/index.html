@@ -8,6 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"></script>
+    <script src="jquery-ui.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
@@ -21,7 +22,9 @@
         <table>
             <tbody>
                 <tr>
-                    <td><h1>You are connected to My TestNet Token</h1></td>
+                    <td><h1>Welcome to MyTestNetToken</h1>
+                        <p>An ERC20 Token dApp for educational purposes</p>
+                    </td>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td>
                         <div class="contractBalances">
@@ -46,19 +49,18 @@
         </table>    
     </div>
 <br/>   
-
-
     
 <div class="container">
     <div class="userData">
         <p>Your ETH Balance is: </p><span id="userEthBalance"></span><br/>
         <p>Your Token Balance is: </p><span id="userTokenBalance"></span><br/>
-        <button class="btn-primary" id="requestTokens" style="border-radius: 20px;">Request 1000 FREE MTNT Tokens! (One time only)</button>
+        <button class="btn-primary" id="requestTokens" style="border-radius: 10px;">Request 1000 FREE MTNT Tokens! (One time only)</button>
     </div>
     <div class="randomNumber">
-        <label for="userGuess">Guess a number between 0 and 10 and WIN 0.1 ETH!</label>
-        <input type="number" id="userGuess" placeholder="0 - 10" required></input>
-        <button class="btn-primary" id="randomNumberBtn">Guess!</button>
+        <img src="https://media.giphy.com/media/kbhgFU6739Zh3wZrn9/source.gif" alt="GuessNumber" width="200px" class="images" />
+        <label for="userGuess">Guess a number between <br/>0 and 10 and WIN 0.1 ETH!</label>
+        <input type="number" id="userGuess" placeholder="0 - 10" style="border-radius: 10px;" required></input>
+        <button class="btn-primary" id="randomNumberBtn" style="border-radius: 10px;">Guess!</button>
     </div>
     
 </div>
@@ -69,13 +71,15 @@
 <div class="container">  
     <div class="makeTransaction">
         <p>Transfer Token:</p>
-        <label for="transferRecipient">Recipient Address (Needs to be a valid Ethereum Address!)</label><br/>
-        <input type="text" id="transferRecipient"></input><br/>
+        <label for="transferRecipient">Recipient Address</label><br/>
+        <input type="text" id="transferRecipient" style="border-radius: 10px;"></input><br/>
         <label for="transferTokenAmount">Amount of MTNT to Transfer in Wei</label><br/>
-        <input type="number" id="transferTokenAmount"></input><br/>
-        <button class="btn-primary" id="transferTokenBtn">Transfer Token(s)</button><br/>
+        <input type="number" id="transferTokenAmount" style="border-radius: 10px;"></input><br/>
+        <button class="btn-primary" id="transferTokenBtn" style="border-radius: 10px;">Transfer Token(s)</button><br/>
     </div> 
     <div class="flipCoin" id="tokenFlip">
+        <img src="https://media.giphy.com/media/6jqfXikz9yzhS/source.gif" alt="coinflipGIPHY" width="200px" class="images" />
+        <p>Flip and WIN 100 MTNT Tokens</p>
         <input type="radio" id="heads" name="headTail" checked>Heads</button>
         <input type="radio" id="tails" name="headTail">Tails</button>
         <button class="btn-primary" id="flipToken" style="border-radius: 10px;">Flip Coin</button>
@@ -90,8 +94,8 @@
     <div class="funding" id="fundingDiv">
         <p>Funding for Contract Owner:</p>
         <label for="fundingAmount">Amount in ETH to Fund the contract</label><br/>
-        <input type="number" id="fundingAmount"></input><br/>
-        <button class="btn-primary" id="fundContractBtn">Fund Contract!</button><br/>
+        <input type="number" id="fundingAmount" style="border-radius: 10px;"></input><br/>
+        <button class="btn-primary" id="fundContractBtn" style="border-radius: 10px;">Fund Contract!</button><br/>
     </div>
 </div>
  

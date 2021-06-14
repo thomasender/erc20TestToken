@@ -1,15 +1,20 @@
 body{
     background: rgb(20,106,210);
-background: -moz-radial-gradient(circle, rgba(20,106,210,1) 0%, rgba(11,68,135,1) 100%);
-background: -webkit-radial-gradient(circle, rgba(20,106,210,1) 0%, rgba(11,68,135,1) 100%);
-background: radial-gradient(circle, rgba(20,106,210,1) 0%, rgba(11,68,135,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#146ad2",endColorstr="#0b4487",GradientType=1);
+    background: -moz-radial-gradient(circle, rgba(20,106,210,1) 0%, rgba(11,68,135,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(20,106,210,1) 0%, rgba(11,68,135,1) 100%);
+    background: radial-gradient(circle, rgba(20,106,210,1) 0%, rgba(11,68,135,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#146ad2",endColorstr="#0b4487",GradientType=1);
     color: #aaa;
-    font-size: 18px;
+    font-size: 25px;
 }
 
 table {
     border-spacing: 15px;
+    
+}
+table td{
+    padding: 0 10px;
+    
 }
 
 .container {
@@ -19,7 +24,7 @@ table {
 .tokenHeader{
     width: 90%;
     margin: 0 auto;
-    height: 150px;
+    height: 200px;
     border-radius: 20px;
     display: flex;
     justify-content: space-around;
@@ -81,4 +86,8 @@ table {
     border-radius: 20px;
     margin: auto;
     box-shadow: 10px 5px 5px black;
+}
+
+.images{
+    border-radius: 20px;
 }

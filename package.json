@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@biconomy/mexa": "^2.0.8",
     "@metamask/detect-provider": "^1.2.0",
+    "@opengsn/gsn": "^2.1.0",
     "@openzeppelin/contracts": "^4.1.0",
     "@openzeppelin/contracts-upgradeable": "^4.1.0",
     "@openzeppelin/upgrades": "^2.8.0",

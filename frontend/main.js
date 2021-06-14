@@ -1,6 +1,6 @@
 const web3 = new Web3(Web3.givenProvider);
 
-var tokenContractAddress = "0x59282eB5c0ae4Aa4E1B1724FDCF629e192ebe3b6";
+var tokenContractAddress = "0x54956E74cb8bF3974A7a03Aef313287956E4c254";
 var mtnt;
 var x;
 var y;
@@ -26,7 +26,7 @@ $(document).ready(function() {
         y = document.getElementById("requestTokens");
         didRequestToken = await mtnt.methods.tokenRequested(user).call();
         console.log(didRequestToken);
-        if(user != 0xD9Dbca32cC6Ae2A58445f65b8DEE4A4706D6C09a) {
+        if(user != 0xE7D693e35fe25a6776523e1dE04F877A18f33B08) {
             x.style.display = "none";
         }
         if(didRequestToken){
@@ -86,7 +86,7 @@ async function getRandomNumber() {
         alert("Please insert a valid number!");
     }
     else if(userGuess === randomNumber){
-        alert("Correct! You WIN!");
+        alert("Correct! You WIN! Sign Transanction to receive 0.1 ETH! Page will reload after TX has been approved, please stand by...");
         let amount = web3.utils.toWei("0.1", "ether");
          await mtnt.methods.payout(amount).send({from: user});
          location.reload();
@@ -106,7 +106,7 @@ async function contractBalance() {
 async function fundContract() {
     let fundingAmount = parseInt(web3.utils.toWei($("#fundingAmount").val()));
     try{
-        web3.eth.sendTransaction({from: ethereum.selectedAddress, to: tokenContractAddress, value: fundingAmount});
+        await web3.eth.sendTransaction({from: ethereum.selectedAddress, to: tokenContractAddress, value: fundingAmount});
         location.reload();
     } catch (error) {
         console.log(error);
@@ -120,6 +120,7 @@ async function payToken(){
     } else{
         try{
             await mtnt.methods.payToken().send({from: user});
+            location.reload();
         } catch (error) {
             console.log(error.reason);
         }
